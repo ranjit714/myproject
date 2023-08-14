@@ -1,0 +1,22 @@
+<div class="container">
+    <p>parent works!</p>
+
+    <div>massage from child:<strong>{{childData}}</strong></div>
+
+    <form>
+        <label>send data child</label>
+        <input type="text" name="parent" #refData>
+        <button type="button" class="btn btn-primary btn-sm" (click)="getData(refData.value)">send</button>
+    </form>
+
+
+
+    <hr size="5px">
+
+    <app-child (eventData)="childData=$event" [parentData]="mydata"></app-child>
+
+</div>
+<button type="button" (click) ="incrent()">Increment value</button>
+<button type="button" (click) ="decrement()">ecrement value</button>
+<h6>{{message}}</h6>
+

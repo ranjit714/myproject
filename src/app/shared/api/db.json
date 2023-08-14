@@ -1,0 +1,79 @@
+{
+  "employee": [
+    {
+      "id": 104,
+      "name": "Paresh",
+      "post": "Angolar devoloper",
+      "gender": "male",
+      "salary": "800000"
+    },
+    {
+      "id": 105,
+      "name": "Bhagyashri",
+      "post": "office Executive",
+      "gender": "female",
+      "salary": "30000"
+    },
+    {
+      "name": "pratiksha",
+      "post": "angular devoloper",
+      "gender": "female",
+      "salary": "500000",
+      "id": 106
+    },
+    {
+      "name": "rakesh",
+      "post": "shengdane",
+      "gender": "male",
+      "salary": "300000",
+      "id": 107
+    },
+    {
+      "name": "sanket",
+      "post": "software jva",
+      "gender": "male",
+      "salary": "500000",
+      "id": 108
+    },
+    {
+      "name": "Rushikesh Magar",
+      "post": "Student",
+      "gender": "male",
+      "salary": "40000",
+      "id": 110
+    },
+    {
+      "name": "Vishal vyash",
+      "post": "Full stack devoloper",
+      "gender": "male",
+      "salary": "500000",
+      "id": 111
+    },
+    {
+      "name": "Rani",
+      "post": "Ang",
+      "gender": "female",
+      "salary": "600000",
+      "id": 112
+    },
+    {
+      "name": "scholarship test no 1",
+      "post": "Angolar devoloper",
+      "gender": "male",
+      "salary": "30000",
+      "id": 113
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "user": "admin",
+      "password": "admin@123"
+    },
+    {
+      "id": 1,
+      "user": "hero",
+      "password": "hero@123"
+    }
+  ]
+}

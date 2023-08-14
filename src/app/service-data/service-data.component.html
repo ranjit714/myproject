@@ -1,0 +1,21 @@
+
+
+
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Id</th><th>Name</th><th>Contact</th><th>Gender</th><th>Address</th><th>post</th><th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of empArray">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.contact}}</td>
+            <td>{{emp.gender}}</td>
+            <td>{{emp.address}}</td>
+            <td>{{emp.post}}</td>
+            <td>{{emp.salary}}</td>
+        </tr>
+    </tbody>
+</table>

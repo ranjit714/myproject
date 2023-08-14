@@ -1,0 +1,75 @@
+<p>directives works!</p>
+<h3>Use of *ngif</h3>
+<h3 *ngIf="iscond">1 statement run</h3>
+<h3 [hidden]="iscond">2 statement run</h3>
+
+<div *ngIf="iscond;then thenpart else elsepart"></div>
+<ng-template #thenpart>
+    <strong>thise is true statement</strong>
+</ng-template>
+<ng-template #elsepart>
+    <strong>thise is false statement</strong>
+</ng-template>
+
+<hr>
+<h3 [ngClass]="myClass" [ngStyle]="myStyle">Use of *ngfor</h3>
+<!--div *ngFor="let fruit of fruits">{{fruit}}</div-->
+<ul *ngFor="let fruit of fruits">
+    <li [ngClass]="myClass">{{fruit}}</li>
+</ul>
+
+
+<hr>
+
+<button type="button" (click)="showCountry()" class="btn btn-primary">selet contry</button>|
+<button type="button" (click)="showStates()" class="btn btn-primary">selet state</button>
+
+<div *ngIf="iscond;then contryPart;else statePart"></div>
+    <ng-template #contryPart>
+        <ul *ngFor="let con of contry">
+            <li (click)="selectedItem(con)">{{con}}</li>
+        </ul>    
+    </ng-template>
+    
+    <ng-template #statePart>
+        <ul *ngFor="let state of states">
+            <li (click)="selectedItem(state)">{{state}}</li>
+        </ul>
+    </ng-template>
+    
+    <!--div *ngFor="let mychoice of mix"-->
+        <div [ngSwitch]="mychoice">
+            <div *ngSwitchCase="mychoice">you have selected {{mychoice}}</div>
+
+        </div>
+
+    <!--/div-->
+
+
+<hr>
+<h3>select state</h3>
+<div [ngSwitch]="str"> 
+<div *ngSwitchCase="'maharashtra'"> you have selected maharatra</div>
+<div *ngSwitchCase="'himachal pradesh'">you have selected himachal pradesh</div>
+<div *ngSwitchCase="'utthar pradesh'">you have selsected utthar pradesh</div>
+<div *ngSwitchCase="'arunachal pradesh'">you have selected arunachal pradesh</div>
+</div>
+
+<hr>
+<h3>select contry</h3>
+<div [ngSwitch]="cont"> 
+<div *ngSwitchCase="'India'"> you have selected india</div>
+<div *ngSwitchCase="'pakistan'">you have selected pakistan</div>
+<div *ngSwitchCase="''">you have selsected utthar pradesh</div>
+<div *ngSwitchCase="''">you have selected arunachal pradesh</div>
+</div>
+
+<hr>
+<h3>use of *ngSwitchCase</h3>
+<div [ngSwitch]="myfruit">
+    <div *ngSwitchCase="'Apple'">you have selected Apple</div>
+    <div *ngSwitchCase="'mango'">you have selected mango</div>
+    <div *ngSwitchCase="'graps'">you have selected graps</div>
+    <div *ngSwitchCase="'chiku'">you have selected chiku</div>
+   
+</div>

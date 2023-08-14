@@ -1,0 +1,98 @@
+<form #utfVal="ngForm" (ngSubmit)="getdata(utfVal.value)">
+   
+    <div class="form-group">
+    <label>Enter your full Name</label>
+
+    <input type="text" #reffname="ngModel" name="fname" class="form-control" pattern="[A-Za-z ]{2,30}" ngModel required>
+    
+    <div class="alert alert-danger" *ngIf="reffname.invalid && reffname.touched">
+        <div *ngIf="reffname.hasError('required')">
+            this field is required
+         </div>
+
+         <div *ngIf="reffname.hasError('pattern')">
+             full name must contain charecter with mix2 and max30
+         </div>
+
+    </div>
+    </div>
+    
+    <div class="form-group">
+    <label>Enter your Password</label>
+
+    <input type="text" #reffPass="ngModel" name="Password" class="form-control" pattern="[({8,})(/d)([A-Z])(?!.*\s)[0-9a-zA-Z!@#$%^&*()]" ngModel required>
+    
+    <div class="alert alert-danger" *ngIf="reffPass.invalid && reffPass.touched">
+        <div *ngIf="reffPass.hasError('required')">
+            this field is required
+         </div>
+
+         <div *ngIf="reffPass.hasError('pattern')">
+            Password must contain 8 charecter 1st latter capital 2small include symbols and number
+         </div>
+
+    </div>
+    </div>
+
+    <div class="form-group">
+        <label>Enter your Contact</label>
+    
+        <input type="text" #refCont="ngModel" name="contact" class="form-control" pattern="([0-9]{0,10})" ngModel required>
+        
+        <div class="alert alert-danger" *ngIf="refCont.invalid && refCont.touched">
+            <div *ngIf="refCont.hasError('required')">
+                this field is required
+             </div>
+    
+             <div *ngIf="refCont.hasError('pattern')">
+                 contact number should be contain 10 digits
+             </div>
+    
+        </div>
+        </div>
+
+        <div class="form-group">
+            <label>Enter your Email</label>
+        
+            <input type="text" #refemail="ngModel" name="email" class="form-control" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ngModel required>
+            
+            <div class="alert alert-danger" *ngIf="refemail.invalid && refemail.touched">
+                <div *ngIf="refemail.hasError('required')">
+                    this field is required
+                 </div>
+        
+                 <div *ngIf="refemail.hasError('pattern')">
+                     email must contain charecter include @ symbols
+                 </div>
+                </div>
+            </div>
+
+                 <div class="form-group">
+                      <label>Select Course</label>
+                      <select name="course" #refcourse="ngModel" class="form-control" ngModel required>
+                        <option value="">select course</option>
+                        <option value="c" *ngFor="let c of mycorses">{{c}}</option>
+                      </select>
+                      <div class="alert alert-danger" *ngIf="refcourse.invalid && refcourse.touched">
+                        <div *ngIf="refcourse.hasError('required')">
+                            this field is required
+                         </div>
+                         </div>
+                 </div>
+                 <div class="form-check-lebel">
+                    <label class="form-check-label">
+                  <input type="checkbox" name="term" #refterm="ngModel" class="form-check-inpute" value="true" ngModel required>
+                        i agree to term your and condition
+                    </label>
+                    <div class="alert alert-danger" *ngIf="refterm.invalid && refterm.touched">
+                        <div *ngIf="refterm.hasError('required')">
+                            this field is required
+                         </div>
+                         </div>
+                 </div>
+                 
+           
+
+   <button type="submit" class="btn btn-primary mx-1" [disabled]="utfVal.invalid">Submit</button>
+
+</form>

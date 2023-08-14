@@ -1,0 +1,49 @@
+<div class="container">
+     <!--string pippe-->
+    <div>{{greeting}}</div>
+    <div>uppercase pipe:{{greeting| uppercase}}</div>
+    <div>lowercase pipe:{{greeting| lowercase}}</div>
+    <div>titlecase pipe:{{greeting| titlecase}}</div>
+    <div>lowercase pipe:{{greeting| slice:10:25}}</div>
+
+    <!--json pippe-->
+    <div>Json pipe:{{emp | json}}</div>
+
+
+    <!--number pipe-->
+    <div><strong>{{8.123 | number:'3.3-6'}}</strong></div>
+    <div><strong>{{8.123 | number:'3.5-6'}}</strong></div>
+    <div><strong>{{8.123 | number:'3.1-2'}}</strong></div>
+
+    <!-- currancy pipe -->
+    <div><strong>{{100 |currency}}</strong></div>
+
+    <!-- Date pipe-->
+    <div><strong>{{date |date}}</strong></div>
+
+    <hr>
+    <div>square of number:<strong>{{8 |square}}</strong></div>
+    <hr>
+
+    <table class="table table-striped table-hover ">
+        <thead>
+            <tr>
+                <th>Id</th><th>Name</th><th>contact</th><th>gender</th><th>address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let s of student">
+                <td>{{s.id}}</td>
+                <td>{{s.name |checkgender:s.gender}}</td>
+                <td>{{s.contact}}</td>
+                <td>{{s.gender}}</td>
+                <td>{{s.address }}</td>
+
+            </tr>
+        </tbody>
+    </table>
+    
+
+
+
+</div>>

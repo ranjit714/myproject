@@ -1,0 +1,27 @@
+<p>databinding works!</p>
+
+<strong>thise is my databing compoenet</strong>
+<!--interpolation databing-->
+<h3>{{heading1}}</h3>
+<!-- property databing -->
+<img [src]="imgPath" alt="imgName">
+<div><strong>{{imgName}}</strong></div>
+<br>
+<button type="button" (click) ="changeImg()" > change Image</button>
+<br>
+<!--event databing-->
+<button type="button" (click)="greet()">click</button>
+<br>
+<hr>
+<br>
+<hr>
+<!--Two way databinding-->
+Enter your name
+<input type="text" name="mydata" [(ngModel)]="userData">  <strong>{{userData}}</strong>
+<hr>
+<h3>use reference variable</h3>
+<form>
+    <label>Enter value</label>
+    <input type="text" name="item" #refname>
+    <button type="button" (click)="getRefval(refname.value)">click</button>
+</form>

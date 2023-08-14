@@ -1,0 +1,26 @@
+<p>add works!</p>
+
+<form #rfmData="ngForm" (ngSubmit)="addData(rfmData.value)">
+    <div class="from-group">
+    <label>Enter your Full Name:</label>
+    <input type="text" name="name" class="form-control" ngModel>
+    </div>
+   <div class="from-group">
+            <label>Enter your post:</label>
+            <input type="text" name="post" class="form-control" ngModel>
+            </div>
+            <label>Select gender:</label>
+    <div class="from-group">
+                <label class="form-check-label">
+                <input type="radio" name="gender" class="form-check-label" ngModel value="male">Male
+                <input type="radio" name="gender" class="form-check-label" ngModel value="female">Female
+                </label>
+                </div>
+   <div class="from-group">
+                    <label>Enter your Salary:</label>
+                    <input type="text" name="salary" class="form-control" ngModel>
+                    </div>
+                    <br>
+    <button type="submit" class="btn btn-primary">submit</button>
+
+</form>

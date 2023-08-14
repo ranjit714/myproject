@@ -1,0 +1,10 @@
+<p>child works!</p>
+
+<div>massage from parent: <strong>{{parentData}}</strong></div>
+
+
+<form>
+    <label>send data child</label>
+    <input type="text" name="child" #refData>
+    <button type="button" class="btn btn-primary btn-sm" (click)="getData(refData.value)">send</button>
+</form>

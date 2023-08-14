@@ -1,0 +1,12 @@
+.txt-danger{
+    color: mediumseagreen;
+}
+.bgcolor{
+    background-color: bisque;
+    color:gray;
+}
+.special:hover{
+    font-family: franklin 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:gray;
+    color:red;
+}
